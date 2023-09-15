@@ -17,6 +17,7 @@ const Home = () => {
                         <div className={`${styles.todoCheckbox} ${styles.checked}`} />
                         <div className={styles.inputContainer}>
                             <form onSubmit={addStaticTodo}>
+                 {/* important yaha par input le rhe hain */}
                                 <input value = {input} onChange={handleChange} id={styles.inputField} type="text" placeholder='Create a new todo...' />
                             </form>
                         </div>
@@ -35,7 +36,7 @@ const Home = () => {
             <div className={styles.mainContainer}>
                 <Loading loading={loading}>
                     <TodoSection title="Tasks" todos={incompleteTodos} action={markStaticTodo} />
-
+{/* yaha par same component hain but diffrent prop hain */}
                     <TodoSection title="Completed" todos={completedTodos} action={removeStaticTodo} />
                 </Loading>
             </div>

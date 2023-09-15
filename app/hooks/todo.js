@@ -142,7 +142,7 @@ export function useTodo() {
           )
     }
 
-
+// yaha par static data filter kar rhe hai data ko
     const incompleteTodos = useMemo(() => todos.filter((todo) => !todo.account.marked), [todos])
     const completedTodos = useMemo(() => todos.filter((todo) => todo.account.marked), [todos])
 
